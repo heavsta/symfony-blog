@@ -1,3 +1,29 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+# Defining route for lucky_number
+app_lucky_number:
+  path: /lucky/number
+  controller: App\Controller\LuckyController::number
+
+# Blog #
+homepage:
+  path: /
+  controller: App\Controller\BlogController::index
+
+article_add:
+  path: /add
+  controller: App\Controller\BlogController::add
+
+article_show:
+  path: /show/{url}
+  controller: App\Controller\BlogController::show
+
+article_edit:
+  path: /edit/{id}
+  controller: App\Controller\BlogController::edit
+  requirements:
+    id: '\d+'
+
+article_remove:
+  path: /remove/{id}
+  controller: App\Controller\BlogController::remove
+  requirements:
+    id: '\d+'
