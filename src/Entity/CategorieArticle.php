@@ -35,7 +35,7 @@ class CategorieArticle
     private $timestamps;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Article::class, mappedBy="categories")
+     * @ORM\ManyToMany(targetEntity=Article::class, mappedBy="Categories")
      */
     private $articles;
 
@@ -85,12 +85,11 @@ class CategorieArticle
         return $this;
     }
 
-    /**
-     * @return Collection|CategorieArticle[]
-     */
-    public function getCategories(): Collection
-    {
-        return $this->categories;
+    public function __toString(){
+        // to show the titre of the Category in the select
+        return $this->titre;
+        // to show the id of the Category in the select
+        // return $this->id;
     }
 
     /**
@@ -118,12 +117,5 @@ class CategorieArticle
         }
 
         return $this;
-    }
-
-    public function __toString(){
-        // to show the titre of the Category in the select
-        return $this->titre;
-        // to show the id of the Category in the select
-        // return $this->id;
     }
 }

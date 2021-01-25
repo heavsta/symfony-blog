@@ -32,7 +32,6 @@ class ArticleController extends AbstractController
     public function create(Request $request): Response
     {
         $article = new Article();
-
         $form = $this->createForm(ArticleType::class, $article);
 
         $form->handleRequest($request);

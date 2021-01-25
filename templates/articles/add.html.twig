@@ -1,9 +1,30 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-{{ form_start(form) }}
-
-{{ form_end(form)}}
+	<div class="container text-center mx-auto mt-20 pt-5 flex flex-col items-center justify-center rounded-2xl">
+		{{ form_start(form) }}
+            <div class="center bg-indigo-300">
+                <div>
+                    {{ form_row(form.titre) }}
+                <div>
+                    {{ form_row(form.contenu)}}
+                </div>
+                <div class="nope">
+                    {{ form_row(form.visible)}}
+                </div>
+                <div>
+                    {{ form_row(form.auteur)}}
+                </div>
+                <div>
+                    {{ form_row(form.picture)}}
+                </div>
+                <div class="nope">
+                    {{ form_row(form.categories)}}
+                </div>
+                <div class="text-center text-2xl font-bold text-white p-2 mt-5 rounded-2xl">
+                    {{ form_row(form.save, { 'label': 'Save'})}}
+                </div>
+            </div>
+		{{ form_end(form)}}
+	</div>
 {% endblock %}
-
-

@@ -54,7 +54,7 @@ class CategorieArticleController extends AbstractController
     }
 
     /**
-     * @Route("/categories/edit/{id}")
+     * @Route("/categories/edit/{id}", name="categories_edit")
      */
     public function update(int $id, Request $request): Response
     {

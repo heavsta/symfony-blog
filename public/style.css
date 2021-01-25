@@ -1,0 +1,47 @@
+/* Form */
+textarea, input {
+    border: .5px solid black;
+    border-radius: 10px;
+    padding: 1px;
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    font-size: 2em;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+form .nope label {
+    display: inline;
+    margin-right: 5px;
+}
+
+form #article_categories label, form #article_visible {
+    font-weight: normal;
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
+
+form #article_categories input, form #article_visible input {
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+form .center {
+    padding: 30px;
+    border-radius: 10px;
+}
+
+form button {
+    background-color:#10B981;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+form button:hover {
+    background-color: #059669;
+    color: #F9FAFB;
+}
