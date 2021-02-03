@@ -49,9 +49,11 @@
 						{% endfor %}
 					</tbody>
 				</table>
-				<a href="{{path('articles_add')}}" class="text-center text-2xl font-bold bg-green-500 text-white py-2 px-4 m-4 rounded-2xl hover:bg-green-600 hover:text-gray-50"><i class="fas fa-plus"></i> New Article</a>
 			</div>
 		{% endif %}
+		<div class="flex flex-col justify-center items-center mt-2">
+			<a href="{{path('articles_add')}}" class="text-center text-2xl font-bold bg-green-500 text-white py-2 px-4 m-4 rounded-2xl hover:bg-green-600 hover:text-gray-50"><i class="fas fa-plus"></i> New Article</a>
+		</div>
 	</section>
 {% endblock %}
 
@@ -68,3 +70,4 @@
 		}
 	</script>
 {% endblock %}
+

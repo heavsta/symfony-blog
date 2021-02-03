@@ -1,12 +1,27 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{article.titre}}{% endblock %}
+{% block title %}{{ article.titre }}{% endblock %}
 
 {% block body %}
 <div class="container mx-auto flex flex-col items-center justify-center">
     <img src="{{ article.picture }}" class="img-fluid mt-10" alt="Main Article image" width="300" height="200"/>
     <h1 class="font-bold font-mono text-5xl m-10">{{ article.titre }}</h1>
     <p>{{ article.contenu }}</p>
+</div>
+
+{% if comments %}
+    <div class="container mx-auto mb-10 flex flex-col items-center justify-center">
+        {% for comment in comments %}
+            {{ comment.authorName }}
+            {{ comment.content }}
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+<div class="container mx-auto mb-10 flex flex-col items-center justify-center">
+    <h2 class="font-bold font-mono text-3xl m-10">Give us your thoughts!</h2>
+    {% include "articles/comment_form.html.twig" %}
 </div>
 {% endblock %}
 

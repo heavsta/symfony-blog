@@ -1,0 +1,13 @@
+{{ form_start(comment_form) }}
+    <div class="center bg-indigo-300">
+        <div>
+            {{ form_row(comment_form.authorName) }}
+        </div>
+        <div>
+            {{ form_row(comment_form.content)}}
+        </div>
+        <div class="text-center text-2xl font-bold bg-green-500 text-white p-2 mt-5 rounded-lg">
+            {{ form_row(comment_form.submit, { 'label': 'Submit'})}}
+        </div>
+    </div>
+{{ form_end(comment_form)}}
